@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Channel Finder Pro</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:#0f172a;
+color:white;
+padding:30px;
+}
+
+.header{
+text-align:center;
+margin-bottom:30px;
+}
+
+.header h1{
+font-size:3rem;
+background:linear-gradient(90deg,#00f5ff,#00ff88);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.search-box{
+max-width:900px;
+margin:auto;
+}
+
+input{
+width:100%;
+padding:18px;
+border:none;
+border-radius:15px;
+background:#1e293b;
+color:white;
+font-size:18px;
+outline:none;
+}
+
+.stats{
+margin-top:15px;
+color:#94a3b8;
+}
+
+#results{
+margin-top:30px;
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+gap:20px;
+}
+
+.card{
+background:#1e293b;
+padding:20px;
+border-radius:18px;
+transition:.3s;
+border:1px solid #334155;
+}
+
+.card:hover{
+transform:translateY(-5px);
+border-color:#00f5ff;
+}
+
+.name{
+font-size:20px;
+font-weight:600;
+color:#00f5ff;
+margin-bottom:10px;
+}
+
+.id{
+font-size:30px;
+font-weight:bold;
+color:#22c55e;
+margin-bottom:10px;
+}
+
+.meta{
+color:#cbd5e1;
+margin-bottom:5px;
+}
+
+button{
+margin-top:10px;
+padding:10px 15px;
+border:none;
+border-radius:10px;
+background:#00f5ff;
+cursor:pointer;
+font-weight:bold;
+}
+
+.no-result{
+text-align:center;
+font-size:22px;
+margin-top:50px;
+color:#94a3b8;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="header">
+<h1>📺 Channel Finder Pro</h1>
+</div>
+
+<div class="search-box">
+<input
+id="search"
+placeholder="Search channel name...">
+
+<div class="stats" id="stats">
+Loading channels...
+</div>
+</div>
+
+<div id="results"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
